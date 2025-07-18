@@ -28,8 +28,32 @@
 
 ---
 
-## 🧪 설치 및 기본 사용법 (Python)
+# 🔍 YOLOv12 – Attention-Centric Real‑Time Object Detector
 
-### ✅ 설치
-```bash
-pip install ultralytics
+Ultralytics 공식 최신 YOLO 시리즈 **YOLOv12**는 주목 기반(Attention-centric) 아키텍처를 도입해 **속도와 정확도 모두 업그레이드**된 모델입니다.
+
+---
+
+## 🚀 주요 특징
+
+- **Attention‑centric 구조**: Area Attention, R‑ELAN, FlashAttention 최적화로 실시간 성능과 고정밀 mAP 달성 :contentReference[oaicite:1]{index=1}  
+- **다양한 태스크 지원**: 회전 바운딩 박스(OBB), 분할(seg), 자세(pose), 분류(cls) 모두 가능 :contentReference[oaicite:2]{index=2}  
+- **효율적 구조 개선**:
+  - 파라미터 최적화, positional encoding 제거, FlashAttention 사용
+  - CNN과의 하이브리드 방식으로 향상된 효율성 :contentReference[oaicite:3]{index=3}
+
+---
+
+## 📊 성능 벤치마크 (COCO val2017, 640px)
+
+| 모델 | mAP (50–95) | GPU 지연(T4‑TensorRT FP16) | 파라미터(M) | FLOPs(B) | 전 버전 대비 |
+|------|-------------|-----------------------------|-------------|----------|-------------|
+| YOLO12n | 40.6% | 1.64 ms | 6.5 | — | +2.1 mAP vs YOLOv10n / +1.2 vs YOLOv11n :contentReference[oaicite:4]{index=4} |
+| YOLO12s | 48.0% | 2.61 ms | 21.4 | — | +1.5 mAP vs RT‑DETR, +42% 속도 :contentReference[oaicite:5]{index=5} |
+| YOLO12m | 52.5% | 4.86 ms | — | 67.5B | +1.0 mAP vs YOLO11m :contentReference[oaicite:6]{index=6} |
+| YOLO12l | 53.7% | 6.77 ms | — | 88.9B | +0.4 mAP vs YOLO11l :contentReference[oaicite:7]{index=7} |
+| YOLO12x | 55.2% | 11.79 ms | — | 199B | +0.6 mAP vs YOLO11x :contentReference[oaicite:8]{index=8} |
+
+---
+
+
