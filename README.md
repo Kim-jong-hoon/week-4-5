@@ -1,6 +1,7 @@
 # YOLO v8과 YOLO v11 버전 영상의 FPS 차이
 ## YOLO v8 버전 일 때 fps
 <img width="421" height="178" alt="dfdf" src="https://github.com/user-attachments/assets/0d7957bc-d538-42da-83c8-eb53f3b91d03" />
+
 ## YOLO v11 버전 일 떄 fps
 <img width="347" height="152" alt="v11 영상 fps" src="https://github.com/user-attachments/assets/f0de9321-a4fb-42f9-9fa9-440c17ca980f" />
 
